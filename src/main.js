@@ -31,9 +31,11 @@ const infoNav = document.getElementById("info");
 const infoOverlay = document.getElementById("info-overlay");
 const infoClose = document.getElementById("info-close");
 const popupButton = document.getElementById("popup-buy");
+let activeSheet = null;
 
 for (const sheet of sheets) {
     sheet.addEventListener("click", () => {
+        activeSheet = sheet;
         popupImage.src = sheet.dataset.image;
         popupTitle.textContent = sheet.dataset.title;
         popupDescription.textContent = sheet.dataset.description;
@@ -60,6 +62,7 @@ function openSheetFromHash() {
         const slug = slugify(title);
 
         if (slug === hash) {
+            activeSheet = sheet;
             popupImage.src = sheet.dataset.image;
             popupTitle.textContent = sheet.dataset.title;
             popupDescription.textContent = sheet.dataset.description;
@@ -74,12 +77,14 @@ function openSheetFromHash() {
 
 popupClose.addEventListener("click", () => {
     popupIframe.src = "";
+    activeSheet = null;
     overlay.classList.remove("active");
 });
 
 overlay.addEventListener("click", (event) => {
     if (event.target === overlay) {
         popupIframe.src = "";
+        activeSheet = null;
         overlay.classList.remove("active");
     }
 });
@@ -99,11 +104,12 @@ infoOverlay.addEventListener("click", (event) => {
 });
 
 popupButton.addEventListener("click", () => {
-    const link = popupButton.dataset.link;
+    if (!activeSheet) return;
 
-    if (link) {
-        window.location.href = link;
-    }
+    const link = activeSheet.dataset.link;
+    if (!link) return;
+
+    window.location.href = link;
 });
 
 window.addEventListener("load", openSheetFromHash);
