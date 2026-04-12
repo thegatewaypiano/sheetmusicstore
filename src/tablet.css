@@ -1,0 +1,101 @@
+@media (min-width: 769px) and (max-width: 1100px) {
+    #header {
+        max-width: 92vw;
+        padding: 10px 0;
+    }
+
+    #nav {
+        gap: 24px;
+        font-size: 16px;
+    }
+
+    #logo-img {
+        width: 120px;
+        height: 120px;
+        padding-left: 0;
+    }
+
+    #search-input {
+        visibility: visible;
+        width: 180px;
+    }
+
+    #sheet-listings {
+        grid-template-columns: repeat(3, 220px);
+        justify-content: space-between;
+        row-gap: 28px;
+        max-width: 92vw;
+        padding-top: 50px;
+    }
+
+    .sheet {
+        width: 220px;
+    }
+
+    .sheet-image {
+        width: 220px;
+    }
+
+    #info-popup {
+        width: 88vw;
+        height: 84vh;
+        padding: 28px 32px;
+    }
+
+    #sheet-popup {
+        width: 90vw;
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+        display: grid;
+        grid-template-columns: minmax(180px, 240px) minmax(220px, 320px);
+        gap: 24px;
+        padding: 28px;
+        align-items: start;
+    }
+
+    #popup-image {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+        max-height: none;
+        justify-self: center;
+    }
+
+    #popup-details {
+        max-width: none;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    #popup-title {
+        font-size: 28px;
+    }
+
+    #popup-description {
+        font-size: 15px;
+    }
+
+    #popup-price {
+        font-size: 23px;
+    }
+
+    #popup-video {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 700px;
+        justify-self: center;
+    }
+
+    #popup-video iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        margin-right: 0;
+    }
+
+    #footer {
+        max-width: 92vw;
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Gateway Piano</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/general/logo.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="src/desktop.css">
+        <link rel="stylesheet" href="src/tablet.css">
+        <link rel="stylesheet" href="src/mobile.css">
+
+        <script src="src/main.js" defer></script>
+    </head>
+    <body>
+        <div id="header">
+            <div id="nav">
+                <span id="shop" class="nav-item">Shop</span>
+                <span id="info" class="nav-item">Info</span>
+            </div>
+            <div id="logo">
+                <img id="logo-img" src="img/general/logo.png" alt="logo">
+            </div>
+            <div id="search">
+                <input id="search-input" type="text" placeholder="Search sheet music" oninput="searchTitles()">
+                <span id="search-icon">
+                    <img id="search-img" src="img/general/search.svg" alt="search-icon">
+                </span>
+            </div>
+        </div>
+        <div id="sheet-listings">
+            <div class="sheet" data-title="Mia and Sebastian's Theme 4-Hands Arrangement" data-image="img/sheets/m&s_theme.jpg" data-description="Lyrical 4-hands arrangement (one piano) inspired by the film score. For intermediate/advanced pairings." data-price="$9.99" data-video="https://www.youtube.com/embed/XG1qX6RrNcU?si=3JjOTcKQ3RA9WxV7" data-link="https://www.sheetmusicplus.com/en/product/mia-sebastian-s-theme-23705422.html">
+                <img class="sheet-image" src="img/sheets/m&s_theme.jpg" alt="sheet music preview">
+                <span class="sheet-title">
+                    Mia and Sebastian's Theme 4-Hands Arrangement
+                </span>
+            </div>
+            <div id="no-results">No results found</div>
+        </div>
+        <div id="sheet-overlay">
+            <div id="sheet-popup">
+                <span id="popup-close">&times;</span>
+                <img id="popup-image" src="" alt="sheet music preview">
+                <div id="popup-details">
+                    <img id="popup-logo" src="img/general/logo.png" alt="logo">
+                    <div id="popup-title"></div>
+                    <div id="popup-description"></div>
+                    <div id="popup-price"></div>
+                    <button id="popup-buy">Buy Now</button>
+                </div>
+                <div id="popup-video">
+                    <iframe id="popup-iframe" title="sheet music preview video" src="" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="info-overlay">
+            <div id="info-popup">
+                <span id="info-close">&times;</span>
+                <img id="info-logo" src="img/general/logo.png" alt="logo">
+                <div id="info-title">Information</div>
+                <div class="info-section">
+                    <div class="info-heading">About</div>
+                    <div class="info-text">This is the official sheet music store for The Gateway Piano. All scores are written by me for solo or duet piano. Full playthroughs of these arrangements are available on my YouTube channel (linked in the footer).</div>
+                </div>
+                <div class="info-section">
+                    <div class="info-heading">Contact</div>
+                    <div class="info-text">For any questions, support, or general inquiries, please feel free to reach out at <a href="mailto:support@thegatewaypiano.com">support@thegatewaypiano.com</a>. I’m always happy to help.</div>
+                </div>
+                <div class="info-section">
+                    <div class="info-heading">Disclaimer</div>
+                    <div class="info-text">All sheets offered are my own personal arrangements and are not endorsed by or affiliated with the original composers or rights holders.</div>
+                </div>
+                <div class="info-section">
+                    <div class="info-heading">Terms of Purchase</div>
+                    <div class="info-text">All products are digital and are provided through ArrangeMe. Payment processing and delivery are handled by their platform. Redistribution, resale, or unauthorized sharing of any purchased sheet music is not permitted.</div>
+                </div>
+                <div class="info-section">
+                    <div class="info-heading">Disputes &amp; Refunds</div>
+                    <div class="info-text">Disputes and refunds are handled through ArrangeMe. However, if you have any questions or concerns, please reach out at <a href="mailto:support@thegatewaypiano.com">support@thegatewaypiano.com</a> and I’ll do my best to help.</div>
+                </div>
+                <div class="info-section">
+                    <div class="info-heading">Privacy</div>
+                    <div class="info-text">This website does not process personal information, use cookies, or collect browsing data. The only information I may receive is your email address if you choose to reach out with a question, and it will only be used to respond to you. ♡</div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <a href="https://youtube.com/@thegatewaypiano" target="_blank" rel="noopeener noreferrer">
+                <img class="footer-icon" src="img/general/youtube.svg" alt="youtube">
+            </a>
+            <a href="https://instagram.com/thegatewaypiano" target="_blank" rel="noopeener noreferrer">
+                <img class="footer-icon" src="img/general/instagram.svg" alt="instagram">
+            </a>
+            <a href="https://tiktok.com/@thegatewaypiano" target="_blank" rel="noopeener noreferrer">
+                <img class="footer-icon" src="img/general/tiktok.svg" alt="tiktok">
+            </a>
+        </div>
+</body>
+</html>
